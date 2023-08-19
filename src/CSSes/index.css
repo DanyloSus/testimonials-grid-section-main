@@ -4,4 +4,47 @@
 @tailwind utilities;
 :root {
   font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+main > section:first-child > img {
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  .reveal {
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+  .reveal.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main > .reveal:nth-child(1) {
+    animation: reveal 0.75s ease-in-out 0.75s backwards;
+  }
+  main > .reveal:nth-child(2) {
+    animation: reveal 0.75s ease-in-out 1.25s backwards;
+  }
+  main > .reveal:nth-child(3) {
+    animation: reveal 0.75s ease-in-out 1.75s backwards;
+  }
+  main > .reveal:nth-child(4) {
+    animation: reveal 0.75s ease-in-out 2.25s backwards;
+  }
+  main > .reveal:nth-child(5) {
+    animation: reveal 0.75s ease-in-out 2.75s backwards;
+  }
+  @keyframes reveal {
+    0% {
+      transform: translateY(150px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
 }/*# sourceMappingURL=index.css.map */
