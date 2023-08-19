@@ -8,6 +8,7 @@ interface GridElementProps {
   colSpan?: number;
   rowSpan?: number;
   isDark: boolean;
+  isEnd?: boolean;
 }
 
 const GridElement = ({
@@ -20,10 +21,13 @@ const GridElement = ({
   colSpan = 1,
   rowSpan = 1,
   isDark = false,
+  isEnd,
 }: GridElementProps) => {
   return (
     <section
-      className=" rounded-lg shadow-xl py-4 px-8 max-w-[540px] flex flex-col gap-3"
+      className={`rounded-lg shadow-xl py-4 px-8 max-w-[540px] flex flex-col gap-3 lg:w-auto lg:pb-9 ${
+        isEnd ? "lg:hidden" : isEnd === false ? "lg:block hidden" : ""
+      }`}
       style={{
         backgroundColor: color,
         gridRow: `span ${rowSpan} / span ${rowSpan}`,

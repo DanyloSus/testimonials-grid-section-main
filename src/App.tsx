@@ -2,7 +2,7 @@ import GridElement from "./Elements/GridElement";
 
 const App = () => {
   return (
-    <main className="grid grid-cols-4 grid-rows-2 max-w-[1110px] min-h-[574px] gap-6">
+    <main className="grid grid-cols-4 grid-rows-2 max-w-[1110px] min-h-[574px] gap-6 lg:px-6 lg:py-[72px] lg:flex flex-col">
       <GridElement
         img="image-daniel.jpg"
         h1="I received a job offer mid-course, and the subjects I learned were current, if not more so, in the company I joined. I honestly feel I got every penny’s worth."
@@ -35,6 +35,7 @@ const App = () => {
         rowSpan={2}
         imgColor="white"
         isDark={false}
+        isEnd={true}
       />
       <GridElement
         img="image-jeanette.jpg"
@@ -57,6 +58,18 @@ const App = () => {
         rowSpan={1}
         imgColor="hsl(263, 55%, 52%)"
         isDark={true}
+      />
+      <GridElement
+        img="image-kira.jpg"
+        h1="Such a life-changing experience. Highly recommended!"
+        p="“ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from professionals who can help me learn programming step by step. I was encouraged to enroll by a former student of theirs who can only say wonderful things about the program. The entire curriculum and staff did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial could ever have. In fact, I’ve often referred to it during interviews as an example of my developent experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 100% recommend! ”"
+        color="white"
+        name="Kira Whittle"
+        colSpan={1}
+        rowSpan={2}
+        imgColor="white"
+        isDark={false}
+        isEnd={false}
       />
     </main>
   );

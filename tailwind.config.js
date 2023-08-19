@@ -9,6 +9,9 @@ export default {
         "very-dark-blackish-blue": "hsl(219, 29%, 14%)",
         white: "hsl(0, 0%, 100%)",
       },
+      screens: {
+        lg: { max: "1024px" },
+      },
     },
   },
   plugins: [],
